@@ -43,8 +43,8 @@ export default function Navbar() {
                 <span className="text-white font-heading font-bold text-lg">P</span>
               </div>
               <div className="hidden sm:block">
-                <h1 className="font-heading font-bold text-xl leading-tight text-text">
-                  Phoenix <span className="text-primary">School</span>
+                <h1 className={`font-heading font-bold text-xl leading-tight transition-colors duration-500 ${scrolled ? 'text-text' : 'text-white'}`}>
+                  Phoenix <span className={scrolled ? 'text-primary' : 'text-accent'}>School</span>
                 </h1>
               </div>
             </a>
@@ -54,7 +54,11 @@ export default function Navbar() {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="px-4 py-2 rounded-lg text-sm font-medium text-text-light hover:text-primary hover:bg-primary/5 transition-all duration-300"
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                    scrolled
+                      ? 'text-text-light hover:text-primary hover:bg-primary/5'
+                      : 'text-white/80 hover:text-white hover:bg-white/10'
+                  }`}
                 >
                   {link.name}
                 </a>
@@ -75,7 +79,7 @@ export default function Navbar() {
               {mobileOpen ? (
                 <X className="w-6 h-6 text-text" />
               ) : (
-                <Menu className="w-6 h-6 text-text" />
+                <Menu className={`w-6 h-6 transition-colors duration-500 ${scrolled ? 'text-text' : 'text-white'}`} />
               )}
             </button>
           </div>

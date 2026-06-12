@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 
 import Navbar from "@/components/Navbar";
-import AnnouncementTicker from "@/components/AnnouncementTicker";
+
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
 import AboutSchool from "@/components/AboutSchool";
@@ -56,7 +56,6 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
-      <AnnouncementTicker />
       <Navbar />
       <Hero />
       <TrustBar />

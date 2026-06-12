@@ -70,7 +70,7 @@ export default function Hero() {
         </motion.div>
       ))}
 
-      <div className="container-width px-4 pt-24 pb-16 relative z-10">
+      <div className="container-width px-4 pt-28 pb-16 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
             <motion.div

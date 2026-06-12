@@ -28,7 +28,7 @@ export default function AnnouncementTicker() {
     <motion.div
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="bg-accent relative z-50"
+      className="bg-accent relative z-40"
     >
       <div className="container-width px-4 py-2 flex items-center justify-between">
         <div className="flex items-center gap-2 flex-1 min-w-0">
