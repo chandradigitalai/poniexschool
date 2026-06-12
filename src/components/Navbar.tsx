@@ -33,7 +33,7 @@ export default function Navbar() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
             ? "glass shadow-lg"
-            : "bg-transparent"
+            : "bg-accent"
         }`}
       >
         <div className="container-width px-4">
@@ -42,9 +42,9 @@ export default function Navbar() {
               <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
                 <span className="text-white font-heading font-bold text-lg">P</span>
               </div>
-              <div className="hidden sm:block">
+               <div>
                 <h1 className={`font-heading font-bold text-xl leading-tight transition-colors duration-500 ${scrolled ? 'text-text' : 'text-white'}`}>
-                  Phoenix <span className={scrolled ? 'text-primary' : 'text-accent'}>School</span>
+                  Phoenix <span className={scrolled ? 'text-accent' : 'text-white'}>School</span>
                 </h1>
               </div>
             </a>
@@ -57,7 +57,7 @@ export default function Navbar() {
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                     scrolled
                       ? 'text-text-light hover:text-primary hover:bg-primary/5'
-                      : 'text-white/80 hover:text-white hover:bg-white/10'
+                      : 'text-white/90 hover:text-white hover:bg-white/10'
                   }`}
                 >
                   {link.name}
@@ -77,7 +77,7 @@ export default function Navbar() {
               aria-label="Toggle menu"
             >
               {mobileOpen ? (
-                <X className="w-6 h-6 text-text" />
+                <X className={`w-6 h-6 transition-colors duration-500 ${scrolled ? 'text-text' : 'text-white'}`} />
               ) : (
                 <Menu className={`w-6 h-6 transition-colors duration-500 ${scrolled ? 'text-text' : 'text-white'}`} />
               )}
